@@ -59,6 +59,7 @@ const ALLOWED_DOMAINS = new Set([
   "stackblitz.com",
   "val.town",
   "giphy.com",
+  
 ]);
 
 const ALLOW_SAME_ORIGIN = new Set([
@@ -329,6 +330,8 @@ const matchHostname = (
     const { hostname } = new URL(url);
 
     const bareDomain = hostname.replace(/^www\./, "");
+
+    
 
     if (allowedHostnames instanceof Set) {
       if (ALLOWED_DOMAINS.has(bareDomain)) {
